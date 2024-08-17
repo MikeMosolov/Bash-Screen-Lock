@@ -1,7 +1,6 @@
 #include<curses.h>
 #include<pthread.h>
-#include<signal.h>
-#include <stdio.h>
+#include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 
@@ -12,13 +11,6 @@ int iret1, iret2;
 
 
 // funcs
-void shandler(int s_num)	// didnt work
-{
-	signal(SIGTSTP, shandler);
-	prinf("No Way");
-}
-
-
 void *blank_screen()
 {
 	signal(SIGTSP,P4%W
@@ -47,6 +39,7 @@ void *check_input()
 		}
 	}
 }
+
 
 
 int main(int argc, char **argv)
