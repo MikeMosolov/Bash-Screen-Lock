@@ -12,7 +12,7 @@ int iret1, iret2;
 
 
 // funcs
-void shandler(int s_num)
+void shandler(int s_num)	// didnt work
 {
 	signal(SIGTSTP, shandler);
 	prinf("No Way");
@@ -51,11 +51,9 @@ void *check_input()
 
 int main(int argc, char **argv)
 {
-		
 	iret1 = pthread_create(&th1, NULL, blank_screen, NULL);
 	iret2 = pthread_create(&th1, NULL, check_input, NULL);
 	
 	pthread_join(th1, NULL);
-	pthread_join(th2, NULL);		
-	
+	pthread_join(th2, NULL);			
 }
